@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, } from 'react-native';
 import { AppLoading } from "expo";
+import { Ionicons } from "@expo/vector-icons"
 import * as Font from "expo-font";
 
-import TabNavigation from "./navigation/TabNavigation";
+import MainNavigation from "./navigation/MainNavigation";
 
 export default class App extends React.Component {
   state = {
@@ -22,7 +22,7 @@ export default class App extends React.Component {
     const { loaded } = this.state;
     if (loaded) {
       return (
-        <TabNavigation />
+        <MainNavigation />
       )
     } else {
       return (
@@ -35,12 +35,3 @@ export default class App extends React.Component {
     }
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
