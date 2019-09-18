@@ -21,8 +21,8 @@ const TabNavigation = createBottomTabNavigator(
         )
       }
     },
-    Search: {
-      screen: createStack(SearchScreen, "Search"),
+    Tv: {
+      screen: createStack(TvScreen, "Tv"),
       navigationOptions: {
         tabBarIcon: ({ focused }) => (
           <TabBarIcon
@@ -32,8 +32,8 @@ const TabNavigation = createBottomTabNavigator(
         )
       }
     },
-    Tv: {
-      screen: createStack(TvScreen, "Tv"),
+    Search: {
+      screen: createStack(SearchScreen, "Search"),
       navigationOptions: {
         tabBarIcon: ({ focused }) => (
           <TabBarIcon
