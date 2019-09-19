@@ -1,9 +1,9 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-import TabNavigation from "./TabNavigation";
-import { DetailScreen } from "../screens";
-import { headerStyles } from "./config";
+import TabNavigation from './TabNavigation';
+import { DetailScreen } from '../screens';
+import { headerStyles } from './config';
 
 const MainNavigation = createStackNavigator(
   {
@@ -11,14 +11,14 @@ const MainNavigation = createStackNavigator(
     Detail: {
       screen: DetailScreen,
       navigationOptions: {
-        ...headerStyles
-      }
-    }
+        ...headerStyles,
+      },
+    },
   },
   {
-    headerMode: "screen",
-    headerBackTitleVisible: false
-  }
+    headerMode: 'screen',
+    headerBackTitleVisible: false,
+  },
 );
 
 export default createAppContainer(MainNavigation);
