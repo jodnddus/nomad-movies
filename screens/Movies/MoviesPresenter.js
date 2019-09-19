@@ -1,16 +1,14 @@
 import React from "react";
-import { Text } from "react-native";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import Loader from "../../components/Loader";
 import MovieSlider from "../../components/MovieSlider";
-import { BG_COLOR } from "../../constants/Colors";
 import Section from "../../components/Section";
 import MovieItem from "../../components/MovieItem";
 
 const Container = styled.ScrollView`
-  background-color: ${BG_COLOR};
+  background-color: black;
 `;
 
 const MoviesPresenter = ({ loading, upcoming, popular, nowPlaying }) =>
@@ -40,7 +38,7 @@ const MoviesPresenter = ({ loading, upcoming, popular, nowPlaying }) =>
             .filter(movie => movie.poster_path !== null)
             .map(movie => (
               <MovieItem
-                horizontal={true}
+                horizontal
                 key={movie.id}
                 id={movie.id}
                 posterPhoto={movie.poster_path}
@@ -56,9 +54,9 @@ const MoviesPresenter = ({ loading, upcoming, popular, nowPlaying }) =>
 
 MoviesPresenter.propTypes = {
   loading: PropTypes.bool.isRequired,
-  upcoming: PropTypes.array,
-  popular: PropTypes.array,
-  nowPlaying: PropTypes.array
+  upcoming: PropTypes.arrayOf.isRequired,
+  popular: PropTypes.arrayOf.isRequired,
+  nowPlaying: PropTypes.arrayOf.isRequired
 };
 
 export default MoviesPresenter;
