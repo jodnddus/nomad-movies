@@ -74,7 +74,7 @@ const MovieSlide = ({
             <MovieRating votes={voteAvg} inSlide={true} />
           </VoteContainer>
         ) : null}
-        <Overview overview={overview} />
+        {overview ? <Overview overview={overview} /> : null}
         <BtnContainer>
           <BtnText>More details</BtnText>
         </BtnContainer>

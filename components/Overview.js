@@ -4,11 +4,13 @@ import styled from "styled-components";
 
 const Container = styled.Text`
   color: white;
+  font-size: 12px;
+  margin-vertical: 10px;
 `;
 
 const Overview = ({ overview }) => (
   <Container>
-    {overview.length > 117 ? `${overview.substring(0, 120)}...` : overview}
+    {overview.length > 150 ? `${overview.substring(0, 147)}...` : overview}
   </Container>
 );
 
