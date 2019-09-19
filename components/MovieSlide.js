@@ -7,6 +7,7 @@ import Layout from "../constants/Layout";
 import MoviePoster from "./MoviePoster";
 import { TINT_COLOR, GREY_COLOR } from "../constants/Colors";
 import MovieRating from "./MovieRating";
+import Overview from "../components/Overview";
 
 const Container = styled.View`
   flex: 1;
@@ -37,12 +38,6 @@ const Title = styled.Text`
   color: ${TINT_COLOR};
   font-size: 14px;
   font-weight: 600;
-`;
-
-const Overview = styled.Text`
-  color: ${TINT_COLOR};
-  font-size: 12px;
-  margin-bottom: 10px;
 `;
 
 const VoteContainer = styled.View`
@@ -79,13 +74,7 @@ const MovieSlide = ({
             <MovieRating votes={voteAvg} inSlide={true} />
           </VoteContainer>
         ) : null}
-        {overview ? (
-          <Overview>
-            {overview.length > 117
-              ? `${overview.substring(0, 120)}...`
-              : overview}
-          </Overview>
-        ) : null}
+        <Overview overview={overview} />
         <BtnContainer>
           <BtnText>More details</BtnText>
         </BtnContainer>
