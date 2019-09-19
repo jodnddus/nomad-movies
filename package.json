@@ -5,7 +5,14 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "precommint": "lint-staged"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.5",
@@ -26,7 +33,10 @@
     "styled-components": "^4.3.2"
   },
   "devDependencies": {
-    "babel-preset-expo": "^6.0.0"
+    "babel-preset-expo": "^6.0.0",
+    "eslint": "^6.4.0",
+    "husky": "^4.0.0-beta.1",
+    "lint-staged": "^9.2.5"
   },
   "private": true
 }
