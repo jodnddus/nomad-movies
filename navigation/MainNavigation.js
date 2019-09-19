@@ -5,7 +5,7 @@ import TabNavigation from "./TabNavigation";
 import { DetailScreen } from "../screens";
 import { headerStyles } from "./config";
 
-const MainNavigation = createStackNavigator(
+const Mainnavigation = createStackNavigator(
   {
     Tabs: { screen: TabNavigation, navigationOptions: { header: null } },
     Detail: {
@@ -21,4 +21,4 @@ const MainNavigation = createStackNavigator(
   }
 );
 
-export default createAppContainer(MainNavigation);
+export default createAppContainer(Mainnavigation);
